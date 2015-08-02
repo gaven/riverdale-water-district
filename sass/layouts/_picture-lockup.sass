@@ -1,0 +1,57 @@
+.picture-lockup
+  background-color: $light-blue
+  max-width: 100%
+  margin-bottom: +(70px)
+  position: relative
+
+  &:after
+    bottom: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(136, 183, 213, 0)
+    border-bottom-color: $light-blue
+    border-width: 30px
+    margin-left: -30px
+
+  &--container
+    +container
+    position: relative
+
+
+    ul
+      +span(12)
+      display: flex
+      justify-content: space-around
+      padding-left: 0
+      height: 210px
+      align-items: center
+      margin-top: 30px
+
+      +respond-to(medium)
+        flex-wrap: wrap
+        height: inherit
+        padding-top: +(20px)
+
+
+      li
+        margin-bottom: 20px
+
+        img
+          width: 200px
+          height: auto
+          border: 2px solid $light-grey
+
+        p
+          text-align: center
+          margin-bottom: 0
+          font:
+            family: $merriweather
+            size: +(14px)
+            weight: 400
+          color: white
+          letter-spacing: .025rem

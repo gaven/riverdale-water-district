@@ -1,0 +1,28 @@
+nav
+  +container
+  ul
+    padding-left: 0
+    margin: 0 10px
+    display: flex
+    justify-content: flex-start
+
+    +respond-to(medium)
+      justify-content: space-around
+
+  li
+    margin-right: +(80px)
+
+    +respond-to(medium)
+      margin-right: 0
+
+    h4
+      color: $dark-grey
+      letter-spacing: .025rem
+      margin: 15px 0 0
+      font-size: +(16px)
+
+    h5
+      letter-spacing: .025rem
+      color: #b5bdc0
+      margin-top: 10px
+      size: +(13px)

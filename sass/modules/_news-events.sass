@@ -1,0 +1,49 @@
+.content-container
+  h4
+    font:
+      weight: 600
+      size: +(18px)
+    letter-spacing: .025rem
+    color: $black
+
+  p
+    font:
+      family: $merriweather
+      weight: 400
+      size: +(13px)
+    letter-spacing: .025rem
+    color: $blue
+    line-height: +(20px)
+    margin-bottom: +(5px)
+
+  h4.date
+    font-weight: 400
+    font-size: +(13px)
+    border-bottom: 1px solid $line-color
+    margin: 0
+    padding-bottom: +(15px)
+    margin-right: +(10px)
+
+  button
+    font:
+      family: $merriweather
+      size: +(14px)
+      weight: 400
+    color: white
+    padding: 8px 0 8px 10px
+    border: none
+    background-color: $green
+    letter-spacing: .025rem
+    margin: 28px 0
+    outline: none
+    display: flex
+    align-items: center
+
+    &:after
+      display: inline-block
+      content: ' '
+      background-image: url('../img/right-arrow.svg')
+      background-size: 22px 22px
+      +size(22px)
+      margin-left: +(10px)
+      margin-right: +(8px)

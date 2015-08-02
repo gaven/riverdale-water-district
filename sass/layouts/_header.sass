@@ -1,0 +1,77 @@
+.header
+  +container
+  margin-top: +(20px)
+
+  +respond-to(medium)
+    display: flex
+    justify-content: space-between
+    margin-left: 30px
+    margin-right: 30px
+
+
+  &--logo
+    +span(4)
+    margin-bottom: +(10px)
+
+    +respond-to(medium)
+      +span(5)
+
+    img
+      width: +(50px)
+      height: auto
+      display: inline-block
+      float: left
+      vertical-align: center
+      margin-right: 10px
+
+    h1
+      font-size: +(30px)
+      color: $black
+      line-height: +(20px)
+      letter-spacing: .025rem
+      margin: 0
+      display: inline-block
+      padding-top: 10px
+
+
+    h3
+      font-size: +(16px)
+      color: $logo-grey
+      letter-spacing: .025rem
+      margin: 10px 0 8px
+      display: inline-block
+
+  &--contact
+    +span(last 6)
+    display: flex
+    justify-content: space-between
+    align-content: center
+    margin-right: 0
+    padding-top: 10px
+
+    +respond-to (medium)
+      +span(last 3)
+
+    h4
+      font-size: +(15px)
+      color: $dark-grey
+      letter-spacing: .025rem
+      margin: 15px 0 0
+
+      +respond-to(medium)
+        display: none
+
+  &--button
+    font:
+      family: $merriweather
+      size: +(15px)
+      weight: 400
+    color: white
+    letter-spacing: .025rem
+    background-color: $green
+    border: none
+    padding: 12px 28px
+    outline: none
+
+    +respond-to(medium)
+      float: right

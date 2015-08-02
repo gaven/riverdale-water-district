@@ -1,0 +1,68 @@
+.footer
+  max-width: 100%
+  background-color: $blue
+  border-top: solid 10px $light-blue
+
+  &--container
+    +container
+
+    +respond-to(medium)
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+    h3
+      color: white
+      font-size: +(17px)
+      margin-top: +(70px)
+      margin-bottom: +(15px)
+
+    p
+      color: white
+      font:
+        family: $merriweather
+        weight: 400
+        size: +(13px)
+      margin: 0
+      line-height: +(19px)
+      letter-spacing: .025rem
+
+      &:last-child
+        margin-bottom: +(80px)
+
+    &-address
+      +span(2)
+
+    &-contact
+      +span(4 at 3)
+
+      a
+        color: white
+        text-decoration: none
+        transition: .2s ease
+
+        &:hover
+          color: $light-blue
+
+    &-button
+      +span(last 4)
+      display: flex
+
+      +respond-to(medium)
+        display: block
+
+      button
+        font:
+          family: $merriweather
+          size: +(15px)
+          weight: 400
+        color: white
+        letter-spacing: .025rem
+        background-color: $light-blue
+        border: none
+        padding: 15px 30px
+        margin-top: +(90px)
+
+        +respond-to (medium)
+          line-height: +(25px)
+          margin-top: 0

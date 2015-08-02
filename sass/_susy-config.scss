@@ -1,0 +1,11 @@
+$susy: (
+  container: 60em,
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  use-custom: (
+    box-sizing: false
+  )
+);

@@ -1,0 +1,151 @@
+ul.tabs
+  margin: 0
+  padding: 0
+  float: left
+  list-style: none
+  border-bottom: 1px solid $border-color
+  width: 100%
+
+  li
+    float: left
+    margin: 0
+    cursor: pointer
+    padding: 10px 50px
+    line-height: 31px
+    border:
+      top: 1px solid $border-color
+      left: 1px solid $border-color
+    background-color: $light-blue
+    color: white
+    overflow: hidden
+    position: relative
+    font-family: $merriweather
+    font-size: +(15px)
+    letter-spacing: .025rem
+    color: white
+    transition: .2s ease
+
+    &:hover
+      background-color: $light-grey
+      color: $blue
+
+ul.tabs li.active
+  background-color: $blue
+  color: white
+  display: block
+  position: relative
+
+.tab_container
+  border: 1px solid $border-color
+  border-top: none
+  clear: both
+  float: left
+  width: 100%
+  background: white
+  overflow: auto
+  margin-bottom: 125px
+
+.tab-image
+  margin: 0 auto
+  margin-bottom: +(50px)
+
+  +respond-to(medium)
+    display: none
+
+  img
+    border: 1px solid $border-color
+    margin-top: +(120px)
+
+.tab_content
+  padding: 0 0 0 35px
+  display: none
+
+  &--container
+    display: flex
+
+    &-text
+      max-width: +(600px)
+
+    &-image
+      margin: 0 auto
+
+      img
+        margin-top: +(100px)
+        border: 1px solid $border-color
+
+
+  h2
+    font-size: +(17px)
+    color: $black
+    margin: 45px 0 15px 0
+    padding-top: 0
+
+    &:nth-of-type(2n)
+      margin-top: 20px
+  p
+    font:
+      family: $merriweather
+      size: (+13px)
+      weight: 400
+    color: $logo-grey
+    line-height: 22px
+    padding-bottom: 20px
+
+    &:first-of-type
+      border-bottom: 1px solid $border-color
+
+  &--watering-info
+    display: flex
+    justify-content: space-between
+
+    &--watering-box
+      max-width: +(260px)
+      height: +(120px)
+      border: 1px solid $border-color
+      position: relative
+      margin-bottom: +(50px)
+
+      h4
+        font:
+          weight: 700
+          size: +(14px)
+        letter-spacing: .04rem
+        line-height: (+19px)
+        text-transform: uppercase
+        color: white
+        text-align: center
+        background-color: $light-blue
+        margin: 0
+        padding: 15px 0 10px
+
+        &:nth-of-type(even)
+          background-color: white
+          color: $light-blue
+          position: absolute
+          bottom: 0
+          width: 100%
+          margin-bottom: +(8px)
+
+.tab_last
+  border-right: 1px solid $border-color
+
+.tab_drawer_heading
+  display: none
+
++respond-to(small)
+  .tabs
+    display: none
+
+  .tab_drawer_heading
+    background-color: #ccc
+    color: white
+    border-top: 1px solid $border-color
+    margin: 0
+    padding: 5px 20px
+    display: block
+    cursor: pointer
+    user-select: none
+
+  .d_active
+    background-color: #666
+    color: #fff
