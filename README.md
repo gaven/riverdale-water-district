@@ -6,3 +6,4 @@ A simple website for the utility company in Riverdale, CA - Cowtown USA
 * Refactor tabs.sass
 * Rework header
 * Add button link for watering schedule
+* Create lightbox

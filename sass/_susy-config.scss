@@ -5,6 +5,18 @@ $susy: (
   math: fluid,
   output: float,
   gutter-position: split,
+  // debug: (image: show),
+  use-custom: (
+    box-sizing: false
+  )
+);
+
+$sm-mdLayout: (
+  columns: 6,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: split,
   use-custom: (
     box-sizing: false
   )

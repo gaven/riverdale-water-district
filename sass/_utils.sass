@@ -2,6 +2,7 @@
 
 $width-ex-small: 320px
 $width-small: 480px
+$width-sm-md: 610px
 $width-medium: 768px
 $width-large: 1024px
 
@@ -11,6 +12,9 @@ $width-large: 1024px
       @content
   @else if $width == "small"
     @media only screen and (max-width: $width-small)
+      @content
+  @else if $width == "sm-md"
+    @media only screen and (max-width: $width-sm-md)
       @content
   @else if $width == "medium"
     @media only screen and (max-width: $width-medium)

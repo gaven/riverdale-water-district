@@ -45,17 +45,6 @@ ul.tabs li.active
   overflow: auto
   margin-bottom: 125px
 
-.tab-image
-  margin: 0 auto
-  margin-bottom: +(50px)
-
-  +respond-to(medium)
-    display: none
-
-  img
-    border: 1px solid $border-color
-    margin-top: +(120px)
-
 .tab_content
   padding: 0 0 0 35px
   display: none
@@ -69,8 +58,11 @@ ul.tabs li.active
     &-image
       margin: 0 auto
 
+      +respond-to(medium)
+        display: none
+
       img
-        margin-top: +(100px)
+        margin-top: +(99px)
         border: 1px solid $border-color
 
 

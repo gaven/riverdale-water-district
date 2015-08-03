@@ -1,10 +1,18 @@
 .content-container
+  +respond-to(sm-md)
+    margin: 0 auto
+
   h4
     font:
       weight: 600
       size: +(18px)
     letter-spacing: .025rem
     color: $black
+
+    +respond-to(sm-md)
+      text-align: center
+      padding-top: +(25px)
+      margin-top: 0
 
   p
     font:
@@ -24,6 +32,11 @@
     padding-bottom: +(15px)
     margin-right: +(10px)
 
+    +respond-to(sm-md)
+      margin-right: 0
+      text-align: left
+      padding-top: 0
+
   button
     font:
       family: $merriweather
@@ -38,6 +51,9 @@
     outline: none
     display: flex
     align-items: center
+
+    +respond-to(sm-md)
+      margin: 28px auto
 
     &:after
       display: inline-block

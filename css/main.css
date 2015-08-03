@@ -82,6 +82,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 li { list-style: none; }
 
 hr { background: #b5bdc0; margin: 0; }
+@media only screen and (max-width: 610px) { hr { display: none; } }
 
 h1 { font-family: "Merriweather", serif; font-weight: 400; }
 
@@ -98,6 +99,7 @@ h5 { font-family: "Merriweather", serif; font-weight: 400; }
 @media only screen and (max-width: 768px) { .header { display: flex; justify-content: space-between; margin-left: 30px; margin-right: 30px; } }
 .header--logo { width: 31.6666666667%; float: left; margin-left: 0.8333333333%; margin-right: 0.8333333333%; margin-bottom: 10px; }
 @media only screen and (max-width: 768px) { .header--logo { width: 40%; float: left; margin-left: 0.8333333333%; margin-right: 0.8333333333%; } }
+@media only screen and (max-width: 610px) { .header--logo { width: 48.3333333333%; float: left; margin-left: 0.8333333333%; margin-right: 0.8333333333%; } }
 .header--logo img { width: 50px; height: auto; display: inline-block; float: left; vertical-align: center; margin-right: 10px; }
 .header--logo h1 { font-size: 30px; color: #29343a; line-height: 20px; letter-spacing: 0.025rem; margin: 0; display: inline-block; padding-top: 10px; }
 .header--logo h3 { font-size: 16px; color: #556268; letter-spacing: 0.025rem; margin: 10px 0 8px; display: inline-block; }
@@ -110,6 +112,7 @@ h5 { font-family: "Merriweather", serif; font-weight: 400; }
 
 nav { max-width: 60em; margin-left: auto; margin-right: auto; }
 nav:after { content: " "; display: block; clear: both; }
+@media only screen and (max-width: 610px) { nav { display: none; } }
 nav ul { padding-left: 0; margin: 0 10px; display: flex; justify-content: flex-start; }
 @media only screen and (max-width: 768px) { nav ul { justify-content: space-around; } }
 nav li { margin-right: 80px; }
@@ -137,9 +140,13 @@ nav li h5 { letter-spacing: 0.025rem; color: #b5bdc0; margin-top: 10px; size: 13
 
 .content-container { max-width: 60em; margin-left: auto; margin-right: auto; margin-top: 45px; margin-bottom: 70px; display: flex; }
 .content-container:after { content: " "; display: block; clear: both; }
+@media only screen and (max-width: 610px) { .content-container { display: block; max-width: 100%; } }
 .content-container--news { max-width: 460px; margin: 0 10px; padding-right: 20px; }
+@media only screen and (max-width: 610px) { .content-container--news { max-width: 100%; padding-right: 0; margin-left: 20px; margin-right: 20px; } }
 .content-container--events { max-width: 480px; background-color: #f2f2f2; }
+@media only screen and (max-width: 610px) { .content-container--events { max-width: 100%; } }
 .content-container--events-container { padding-left: 20px; padding-right: 10px; }
+@media only screen and (max-width: 610px) { .content-container--events-container { margin-left: 20px; margin-right: 20px; padding: 0; } }
 
 .picture-lockup { background-color: #627aad; max-width: 100%; margin-bottom: 70px; position: relative; }
 .picture-lockup:after { bottom: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-bottom-color: #627aad; border-width: 30px; margin-left: -30px; }
@@ -173,10 +180,14 @@ nav li h5 { letter-spacing: 0.025rem; color: #b5bdc0; margin-top: 10px; size: 13
 .footer--container-button button { font-family: "Merriweather", serif; font-size: 15px; font-weight: 400; color: white; letter-spacing: 0.025rem; background-color: #627aad; border: none; padding: 15px 30px; margin-top: 90px; }
 @media only screen and (max-width: 768px) { .footer--container-button button { line-height: 25px; margin-top: 0; } }
 
+@media only screen and (max-width: 610px) { .content-container { margin: 0 auto; } }
 .content-container h4 { font-weight: 600; font-size: 18px; letter-spacing: 0.025rem; color: #29343a; }
+@media only screen and (max-width: 610px) { .content-container h4 { text-align: center; padding-top: 25px; margin-top: 0; } }
 .content-container p { font-family: "Merriweather", serif; font-weight: 400; font-size: 13px; letter-spacing: 0.025rem; color: #3b5998; line-height: 20px; margin-bottom: 5px; }
 .content-container h4.date { font-weight: 400; font-size: 13px; border-bottom: 1px solid #b5bdc0; margin: 0; padding-bottom: 15px; margin-right: 10px; }
+@media only screen and (max-width: 610px) { .content-container h4.date { margin-right: 0; text-align: left; padding-top: 0; } }
 .content-container button { font-family: "Merriweather", serif; font-size: 14px; font-weight: 400; color: white; padding: 8px 0 8px 10px; border: none; background-color: #94d669; letter-spacing: 0.025rem; margin: 28px 0; outline: none; display: flex; align-items: center; }
+@media only screen and (max-width: 610px) { .content-container button { margin: 28px auto; } }
 .content-container button:after { display: inline-block; content: " "; background-image: url("../img/right-arrow.svg"); background-size: 22px 22px; height: 22px; width: 22px; margin-left: 10px; margin-right: 8px; }
 
 ul.tabs { margin: 0; padding: 0; float: left; list-style: none; border-bottom: 1px solid #bababa; width: 100%; }
@@ -187,15 +198,12 @@ ul.tabs li.active { background-color: #3b5998; color: white; display: block; pos
 
 .tab_container { border: 1px solid #bababa; border-top: none; clear: both; float: left; width: 100%; background: white; overflow: auto; margin-bottom: 125px; }
 
-.tab-image { margin: 0 auto; margin-bottom: 50px; }
-@media only screen and (max-width: 768px) { .tab-image { display: none; } }
-.tab-image img { border: 1px solid #bababa; margin-top: 120px; }
-
 .tab_content { padding: 0 0 0 35px; display: none; }
 .tab_content--container { display: flex; }
 .tab_content--container-text { max-width: 600px; }
 .tab_content--container-image { margin: 0 auto; }
-.tab_content--container-image img { margin-top: 100px; border: 1px solid #bababa; }
+@media only screen and (max-width: 768px) { .tab_content--container-image { display: none; } }
+.tab_content--container-image img { margin-top: 99px; border: 1px solid #bababa; }
 .tab_content h2 { font-size: 17px; color: #29343a; margin: 45px 0 15px 0; padding-top: 0; }
 .tab_content h2:nth-of-type(2n) { margin-top: 20px; }
 .tab_content p { font-family: "Merriweather", serif; font-size: 13px; font-weight: 400; color: #556268; line-height: 22px; padding-bottom: 20px; }
