@@ -43,28 +43,37 @@ ul.tabs li.active
   width: 100%
   background: white
   overflow: auto
-  margin-bottom: 125px
+  margin-bottom: +(40px)
 
 .tab_content
-  padding: 0 0 0 35px
+  padding: 0 0 50px 35px
   display: none
+
+  +respond-to(medium)
+    padding-left: 0
 
   &--container
     display: flex
 
     &-text
       max-width: +(600px)
-
-    &-image
-      margin: 0 auto
+      flex: 1
 
       +respond-to(medium)
+        max-width: 85%
+        margin: 0 auto
+
+    &-image
+      display: flex
+      margin: 0 auto
+      align-items: flex-end
+
+      +respond-to(md-lg)
         display: none
 
       img
-        margin-top: +(99px)
         border: 1px solid $border-color
-
+        display: inline
 
   h2
     font-size: +(17px)
@@ -74,6 +83,7 @@ ul.tabs li.active
 
     &:nth-of-type(2n)
       margin-top: 20px
+
   p
     font:
       family: $merriweather
@@ -81,42 +91,50 @@ ul.tabs li.active
       weight: 400
     color: $logo-grey
     line-height: 22px
+    margin: 0
     padding-bottom: 20px
 
     &:first-of-type
       border-bottom: 1px solid $border-color
 
+    &:nth-of-type(2)
+      padding-bottom: 0
+      margin-bottom: +(25px)
+
   &--watering-info
     display: flex
     justify-content: space-between
 
+    +respond-to (sm-md)
+      display: block
+
     &--watering-box
       max-width: +(260px)
-      height: +(120px)
       border: 1px solid $border-color
-      position: relative
-      margin-bottom: +(50px)
 
+      +respond-to(sm-md)
+        margin:0 auto
+        &:first-child
+          margin-bottom: +(50px)
       h4
         font:
           weight: 700
-          size: +(14px)
-        letter-spacing: .04rem
-        line-height: (+19px)
+          size: (+14px)
         text-transform: uppercase
-        color: white
+        line-height: +(19px)
+        letter-spacing: .025rem
         text-align: center
-        background-color: $light-blue
         margin: 0
-        padding: 15px 0 10px
+        padding: 12px 0 10px
+        color: white
+        background-color: $light-blue
 
-        &:nth-of-type(even)
-          background-color: white
+
+        &:nth-child(even)
           color: $light-blue
-          position: absolute
-          bottom: 0
-          width: 100%
-          margin-bottom: +(8px)
+          background-color: white
+          margin: 25px 0
+          padding: 0
 
 .tab_last
   border-right: 1px solid $border-color

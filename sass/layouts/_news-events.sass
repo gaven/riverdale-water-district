@@ -1,17 +1,19 @@
 .news-events
   width: 100%
 
+  +respond-to (sm-md)
+    padding-bottom: +(28px)
+
   &--header
     background-color: $blue
     width: 100%
 
     &-container
-      +container
+      +container-new
 
       h2
-        +span(3)
-        margin-top: 0
-        margin-bottom: 0
+        max-width: +(185px)
+        margin: 0 0 0 10px
         color: white
         font-weight: 400
         font-size: +(24px)
@@ -23,7 +25,7 @@
           width: 100%
 
 .content-container
-  +container
+  +container-new
   margin-top: 45px
   margin-bottom: 70px
   display: flex
@@ -33,9 +35,14 @@
     max-width: 100%
 
   &--news
-    max-width: +(460px)
-    margin: 0 10px
-    padding-right: +(20px)
+    max-width: +(480px)
+
+    +respond-to(sm-md)
+      max-width: 100%
+      margin-bottom: 28px
+
+    &-container
+      margin: 0 30px 0 10px
 
     +respond-to(sm-md)
       max-width: 100%
@@ -43,18 +50,22 @@
       margin-left: +(20px)
       margin-right: +(20px)
 
+
   &--events
     max-width: +(480px)
     background-color: $light-grey
 
     +respond-to(sm-md)
       max-width: 100%
+      margin-bottom: +(28px)
 
     &-container
-      padding-left: +(20px)
-      padding-right: +(10px)
+      margin: 0 20px 0 15px
+
+      +respond-to(md-lg)
+        margin-right: +(10px)
 
       +respond-to(sm-md)
         margin-left: +(20px)
         margin-right: +(20px)
-        padding: 0
+        padding-bottom: (28px)

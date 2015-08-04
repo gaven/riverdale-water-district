@@ -4,13 +4,32 @@
   margin-bottom: +(70px)
 
   &--container
-    +container
+    +container-new
 
     h2
       margin: 0 0 45px 10px
       padding-top: 25px
       color: $black
 
+    button
+      font:
+        family: merriweather
+        weight: 400
+        size: +(15px)
+      color: white
+      background-color: $light-blue
+      padding: 15px 20px
+      border: none
+      outline: none
+      margin: 0 auto 40px
+      display: block
+
+
+
   &--tabs
-    +span(12 wide)
-    padding-right: +(8px)
+    max-width: +(950px)
+    margin-left: +(10px)
+    +clearfix
+
+  +respond-to(medium)
+    padding-right: +(10px)

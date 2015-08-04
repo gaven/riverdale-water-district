@@ -1,22 +1,31 @@
 .hero
   border-top: 10px solid $green
-  min-width: 100%
+  max-width: 100%
   height: 510px
   background:
     image: url(../img/hero-water-ripple.jpg)
     repeat: no-repeat
     size: cover
 
+  +respond-to(ex-small)
+    height: +(348px)
+
   &--container
-    +container
+    +container-new
     margin-top: +(150px)
 
-    +respond-to (medium)
+    +respond-to(medium)
       margin-top: +(110px)
 
+    +respond-to(small)
+      margin-top: 0
+
   &--blurb-box
-    +span(6)
-    +push(1)
+    max-width: +(450px)
+    margin-left: +(90px)
+
+    +respond-to(sm-md)
+      margin:0 auto
 
   &--blurb
     background-color: transparentize(white, .2)
@@ -24,6 +33,9 @@
 
     +respond-to(medium)
       padding-right: +(30px)
+
+    +respond-to(ex-small)
+      background-color: transparentize(white, .4)
 
     h2
       font-size: +(30px)
@@ -49,3 +61,7 @@
     border: none
     padding: 11px 30px
     outline: none
+
+    +respond-to(small)
+      margin: 0 auto
+      width: 100%

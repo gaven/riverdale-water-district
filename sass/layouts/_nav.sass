@@ -1,32 +1,40 @@
 nav
-  +container
+  +container-new
 
   +respond-to (sm-md)
     display: none
-    
+
   ul
-    padding-left: 0
-    margin: 0 10px
+    margin: 0
+    padding: 0
     display: flex
     justify-content: flex-start
 
     +respond-to(medium)
       justify-content: space-around
 
-  li
-    margin-right: +(80px)
+    li
+      margin-right: +(40px)
+      padding: 0 20px
 
-    +respond-to(medium)
-      margin-right: 0
+      &:hover
+        background-color: $light-blue
 
-    h4
-      color: $dark-grey
-      letter-spacing: .025rem
-      margin: 15px 0 0
-      font-size: +(16px)
+      +respond-to(medium)
+        margin-right: 0
 
-    h5
-      letter-spacing: .025rem
-      color: #b5bdc0
-      margin-top: 10px
-      size: +(13px)
+
+      h4
+        color: $dark-grey
+        letter-spacing: .025rem
+        margin-top: 0
+        margin-bottom: +(7px)
+        padding-top: +(25px)
+        font-size: +(16px)
+
+      h5
+        letter-spacing: .025rem
+        color: #b5bdc0
+        margin: 0
+        size: +(13px)
+        padding-bottom: +(30px)

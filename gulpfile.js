@@ -10,8 +10,18 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     cp           = require('child_process');
 
+
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: './'
+        },
+        host: "localhost"
+    });
+});
+
 gulp.task('styles', function() {
-  return gulp.src('_sass/index.sass')
+  return gulp.src('sass/main.sass')
     .pipe(plumber())
     .pipe(sass({
       style: 'expanded',
@@ -32,19 +42,10 @@ gulp.task('clean', function() {
 });
 
 
-gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        server: {
-            baseDir: './'
-        },
-        host: "localhost"
-    });
-});
-
 gulp.task('watch', function() {
   // Watch .sass files
-  gulp.watch('_sass/**/*.{sass,scss}', ['styles']);
-  gulp.watch(['index.html', 'img/*', 'js/*.js']);
+  gulp.watch('sass/**/*.{sass,scss}', ['styles']);
+  gulp.watch(['index.html', 'img/*', 'js/*.js']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['clean'], function() {

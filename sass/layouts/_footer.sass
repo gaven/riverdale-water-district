@@ -4,18 +4,20 @@
   border-top: solid 10px $light-blue
 
   &--container
-    +container
+    +container-new
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: +(70px)
+    padding-bottom: +(80px)
 
     +respond-to(medium)
-      display: flex
-      justify-content: space-around
-      align-items: center
+      display: block
 
     h3
       color: white
       font-size: +(17px)
-      margin-top: +(70px)
-      margin-bottom: +(15px)
+      margin: 0 0 15px
 
     p
       color: white
@@ -27,14 +29,16 @@
       line-height: +(19px)
       letter-spacing: .025rem
 
-      &:last-child
-        margin-bottom: +(80px)
+    &--contact-info
+      width: +(400px)
+      margin-left: +(10px)
+      display: flex
+      justify-content: space-between
+      align-items: center
 
-    &-address
-      +span(2)
+      +respond-to(medium)
+        margin: 0 auto
 
-    &-contact
-      +span(4 at 3)
 
       a
         color: white
@@ -44,25 +48,18 @@
         &:hover
           color: $light-blue
 
-    &-button
-      +span(last 4)
-      display: flex
+    button
+      font:
+        family: $merriweather
+        size: +(15px)
+        weight: 400
+      color: white
+      letter-spacing: .025rem
+      background-color: $light-blue
+      border: none
+      padding: 15px 30px
+      outline: none
+      margin-right: +(30px)
 
-      +respond-to(medium)
-        display: block
-
-      button
-        font:
-          family: $merriweather
-          size: +(15px)
-          weight: 400
-        color: white
-        letter-spacing: .025rem
-        background-color: $light-blue
-        border: none
-        padding: 15px 30px
-        margin-top: +(90px)
-
-        +respond-to (medium)
-          line-height: +(25px)
-          margin-top: 0
+      +respond-to (medium)
+        display: none
