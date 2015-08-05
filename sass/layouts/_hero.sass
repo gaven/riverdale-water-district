@@ -7,18 +7,21 @@
     repeat: no-repeat
     size: cover
 
-  +respond-to(ex-small)
-    height: +(348px)
+  +respond-to(small)
+    height: +(405px)
 
   &--container
     +container-new
-    margin-top: +(150px)
+    margin-top: +(130px)
 
     +respond-to(medium)
       margin-top: +(110px)
 
     +respond-to(small)
-      margin-top: 0
+      margin-top: +(65px)
+
+    +respond-to(ex-small)
+      margin-top: +(20px)
 
   &--blurb-box
     max-width: +(450px)
@@ -27,6 +30,9 @@
     +respond-to(sm-md)
       margin:0 auto
 
+    +respond-to(small)
+      margin: 0 20px
+
   &--blurb
     background-color: transparentize(white, .2)
     padding: 30px 70px 0 30px
@@ -34,15 +40,11 @@
     +respond-to(medium)
       padding-right: +(30px)
 
-    +respond-to(ex-small)
-      background-color: transparentize(white, .4)
-
     h2
       font-size: +(30px)
       margin: 0
       color: $blue
       letter-spacing: .025rem
-
 
     h3
       font-size: +(19px)

@@ -1,15 +1,20 @@
 // Smooth Scroll
 
-var $contactButton = $('html, body');
-$('a[href*=#]').click(function() {
-    $contactButton.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1200);
-    return false;
+$('a[href*=#]').click(function(){
+$('html, body').animate({
+    scrollTop: $( $.attr(this, 'href') ).offset().top
+}, 1000);
+return false;
 });
 
+//Trigger Child Elements on Hover
+
+$('nav ul a').hover(function() {
+  $(this).find('h4, h5').toggleClass('nav-hover')
+});
 
 // Tabs
+
    $(".tab_content").hide();
    $(".tab_content:first").show();
 
@@ -47,3 +52,6 @@ $('a[href*=#]').click(function() {
 // Border-Right On Last Tab
 
  $('ul.tabs li').last().addClass("tab_last");
+
+
+// Lightbox

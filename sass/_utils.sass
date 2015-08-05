@@ -3,16 +3,17 @@
   margin-left: auto
   margin-right: auto
 
-// Media Queries For Graceful Degradation
-
-$width-ex-small: 320px
-$width-small: 480px
-$width-sm-md: 610px
-$width-medium: 768px
-$width-md-lg: 850px
-$width-large: 1024px
+$width-tiny: 22.5rem
+$width-ex-small: 24.38rem
+$width-small: 30rem
+$width-sm-md: 38.13rem
+$width-medium: 48rem
+$width-md-lg: 53.13rem
 
 @mixin respond-to($width)
+  @if $width == "tiny"
+    @media only screen and (max-width: $width-tiny)
+      @content
   @if $width == "ex-small"
     @media only screen and (max-width: $width-ex-small)
       @content

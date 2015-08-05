@@ -172,13 +172,14 @@ table {
 li {
   list-style: none; }
 
-a {
-  text-decoration: none; }
+a, a:active, a:focus {
+  text-decoration: none;
+  outline: none; }
 
 hr {
   background: #bababa;
   margin: -1px 0; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     hr {
       display: none; } }
 
@@ -216,7 +217,7 @@ h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 15px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     .header {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
@@ -237,9 +238,6 @@ h5 {
       display: inline-block;
       float: left;
       margin-right: 10px; }
-      @media only screen and (max-width: 768px) {
-        .header--logo img {
-          margin-right: 0; } }
     .header--logo h1 {
       font-size: 30px;
       color: #29343a;
@@ -268,7 +266,7 @@ h5 {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 48rem) {
       .header--contact {
         width: 150px; } }
     .header--contact h4 {
@@ -276,33 +274,37 @@ h5 {
       color: #414b4b;
       letter-spacing: .025rem;
       margin: 0; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 48rem) {
         .header--contact h4 {
           display: none; } }
-  .header--button {
-    font-family: "Merriweather", serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: white;
-    letter-spacing: .025rem;
-    background-color: #94d669;
-    border: none;
-    padding: 12px 28px;
-    outline: none; }
-    @media only screen and (max-width: 768px) {
-      .header--button {
-        -webkit-justify-content: space-around;
-            -ms-flex-pack: distribute;
-                justify-content: space-around; } }
-    @media only screen and (max-width: 480px) {
-      .header--button {
-        display: none; } }
+    .header--contact button {
+      font-family: "Merriweather", serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: white;
+      letter-spacing: .025rem;
+      background-color: #94d669;
+      border: none;
+      padding: 12px 28px;
+      outline: none;
+      -webkit-transition: .2s ease;
+              transition: .2s ease; }
+      .header--contact button:hover {
+        background-color: #627aad; }
+      @media only screen and (max-width: 48rem) {
+        .header--contact button {
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around; } }
+      @media only screen and (max-width: 30rem) {
+        .header--contact button {
+          display: none; } }
 
 nav {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     nav {
       display: none; } }
   nav ul {
@@ -316,32 +318,36 @@ nav {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 48rem) {
       nav ul {
         -webkit-justify-content: space-around;
             -ms-flex-pack: distribute;
                 justify-content: space-around; } }
-    nav ul li {
-      margin-right: 40px;
-      padding: 0 20px; }
-      nav ul li:hover {
-        background-color: #627aad; }
-      @media only screen and (max-width: 768px) {
-        nav ul li {
-          margin-right: 0; } }
-      nav ul li h4 {
-        color: #414b4b;
-        letter-spacing: .025rem;
-        margin-top: 0;
-        margin-bottom: 7px;
-        padding-top: 25px;
-        font-size: 16px; }
-      nav ul li h5 {
-        letter-spacing: .025rem;
-        color: #b5bdc0;
-        margin: 0;
-        size: 13px;
-        padding-bottom: 30px; }
+    nav ul a {
+      -webkit-transition: .2s ease;
+              transition: .2s ease; }
+      nav ul a:hover {
+        background-color: #627aad;
+        color: white; }
+      nav ul a li {
+        margin-right: 40px;
+        padding: 0 20px; }
+        @media only screen and (max-width: 48rem) {
+          nav ul a li {
+            margin-right: 0; } }
+        nav ul a li h4 {
+          color: #414b4b;
+          letter-spacing: .025rem;
+          margin-top: 0;
+          margin-bottom: 7px;
+          padding-top: 25px;
+          font-size: 16px; }
+        nav ul a li h5 {
+          letter-spacing: .025rem;
+          color: #b5bdc0;
+          margin: 0;
+          size: 13px;
+          padding-bottom: 30px; }
 
 .hero {
   border-top: 10px solid #94d669;
@@ -350,35 +356,38 @@ nav {
   background-image: url(../img/hero-water-ripple.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 30rem) {
     .hero {
-      height: 348px; } }
+      height: 405px; } }
   .hero--container {
     max-width: 60em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px; }
-    @media only screen and (max-width: 768px) {
+    margin-top: 130px; }
+    @media only screen and (max-width: 48rem) {
       .hero--container {
         margin-top: 110px; } }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 30rem) {
       .hero--container {
-        margin-top: 0; } }
+        margin-top: 65px; } }
+    @media only screen and (max-width: 24.38rem) {
+      .hero--container {
+        margin-top: 20px; } }
   .hero--blurb-box {
     max-width: 450px;
     margin-left: 90px; }
-    @media only screen and (max-width: 610px) {
+    @media only screen and (max-width: 38.13rem) {
       .hero--blurb-box {
         margin: 0 auto; } }
+    @media only screen and (max-width: 30rem) {
+      .hero--blurb-box {
+        margin: 0 20px; } }
   .hero--blurb {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px 70px 0 30px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 48rem) {
       .hero--blurb {
         padding-right: 30px; } }
-    @media only screen and (max-width: 320px) {
-      .hero--blurb {
-        background-color: rgba(255, 255, 255, 0.6); } }
     .hero--blurb h2 {
       font-size: 30px;
       margin: 0;
@@ -399,14 +408,14 @@ nav {
     border: none;
     padding: 11px 30px;
     outline: none; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 30rem) {
       .hero--button {
         margin: 0 auto;
         width: 100%; } }
 
 .news-events {
   width: 100%; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     .news-events {
       padding-bottom: 28px; } }
   .news-events--header {
@@ -423,11 +432,14 @@ nav {
         font-weight: 400;
         font-size: 24px;
         padding: 10px 0; }
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 48rem) {
           .news-events--header-container h2 {
             display: block;
             text-align: center;
             width: 100%; } }
+        @media only screen and (max-width: 38.13rem) {
+          .news-events--header-container h2 {
+            margin-left: 20px; } }
 
 .content-container {
   max-width: 60em;
@@ -439,37 +451,34 @@ nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     .content-container {
       display: block;
       max-width: 100%; } }
   .content-container--news {
     max-width: 480px; }
-    @media only screen and (max-width: 610px) {
+    @media only screen and (max-width: 38.13rem) {
       .content-container--news {
         max-width: 100%;
         margin-bottom: 28px; } }
     .content-container--news-container {
       margin: 0 30px 0 10px; }
-    @media only screen and (max-width: 610px) {
-      .content-container--news {
-        max-width: 100%;
-        padding-right: 0;
-        margin-left: 20px;
-        margin-right: 20px; } }
+      @media only screen and (max-width: 38.13rem) {
+        .content-container--news-container {
+          max-width: 100%;
+          padding-right: 0;
+          margin-left: 20px;
+          margin-right: 20px; } }
   .content-container--events {
     max-width: 480px;
     background-color: #f2f2f2; }
-    @media only screen and (max-width: 610px) {
+    @media only screen and (max-width: 38.13rem) {
       .content-container--events {
         max-width: 100%;
         margin-bottom: 28px; } }
     .content-container--events-container {
       margin: 0 20px 0 15px; }
-      @media only screen and (max-width: 850px) {
-        .content-container--events-container {
-          margin-right: 10px; } }
-      @media only screen and (max-width: 610px) {
+      @media only screen and (max-width: 38.13rem) {
         .content-container--events-container {
           margin-left: 20px;
           margin-right: 20px;
@@ -511,12 +520,10 @@ nav {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
-      @media only screen and (max-width: 768px) {
-        .picture-lockup--container ul {
-          -webkit-flex-wrap: wrap;
-              -ms-flex-wrap: wrap;
-                  flex-wrap: wrap; } }
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
       .picture-lockup--container ul li {
         margin-bottom: 20px; }
         .picture-lockup--container ul li img {
@@ -544,17 +551,26 @@ nav {
       margin: 0 0 45px 10px;
       padding-top: 25px;
       color: #29343a; }
+      @media only screen and (max-width: 38.13rem) {
+        .watering-schedule--container h2 {
+          margin-left: 20px; } }
     .watering-schedule--container button {
       font-family: merriweather;
       font-weight: 400;
       font-size: 15px;
       color: white;
       background-color: #627aad;
-      padding: 15px 20px;
-      border: none;
+      padding: 14px 20px;
+      border: 1px solid #627aad;
       outline: none;
       margin: 0 auto 40px;
-      display: block; }
+      display: block;
+      -webkit-transition: .2s ease;
+              transition: .2s ease; }
+      .watering-schedule--container button:hover {
+        background-color: #f2f2f2;
+        color: #627aad;
+        border: 1px solid #bababa; }
   .watering-schedule--tabs {
     max-width: 950px;
     margin-left: 10px; }
@@ -562,9 +578,13 @@ nav {
       clear: both;
       content: "";
       display: table; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     .watering-schedule {
       padding-right: 10px; } }
+  @media only screen and (max-width: 38.13rem) {
+    .watering-schedule {
+      padding-left: 10px;
+      padding-right: 20px; } }
 
 .footer {
   max-width: 100%;
@@ -588,13 +608,24 @@ nav {
             justify-content: space-between;
     margin-top: 70px;
     padding-bottom: 80px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 38.13rem) {
       .footer--container {
-        display: block; } }
+        padding: 0 20px 80px; } }
+    @media only screen and (max-width: 30rem) {
+      .footer--container {
+        margin-top: 50px; } }
+    @media only screen and (max-width: 24.38rem) {
+      .footer--container {
+        margin-top: 30px;
+        padding: 0 0 50px; } }
     .footer--container h3 {
       color: white;
       font-size: 17px;
       margin: 0 0 15px; }
+      @media only screen and (max-width: 48rem) {
+        .footer--container h3 {
+          text-align: center;
+          margin-bottom: 5px; } }
     .footer--container p {
       color: white;
       font-family: "Merriweather", serif;
@@ -603,6 +634,9 @@ nav {
       margin: 0;
       line-height: 19px;
       letter-spacing: .025rem; }
+      @media only screen and (max-width: 48rem) {
+        .footer--container p {
+          text-align: center; } }
     .footer--container--contact-info {
       width: 400px;
       margin-left: 10px;
@@ -618,9 +652,13 @@ nav {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 48rem) {
         .footer--container--contact-info {
+          width: 500px;
           margin: 0 auto; } }
+      @media only screen and (max-width: 24.38rem) {
+        .footer--container--contact-info {
+          width: calc(100% - 20px); } }
       .footer--container--contact-info a {
         color: white;
         text-decoration: none;
@@ -639,11 +677,11 @@ nav {
       padding: 15px 30px;
       outline: none;
       margin-right: 30px; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 48rem) {
         .footer--container button {
           display: none; } }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 38.13rem) {
   .content-container {
     margin: 0 auto; } }
 
@@ -652,7 +690,7 @@ nav {
   font-size: 18px;
   letter-spacing: .025rem;
   color: #29343a; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     .content-container h4 {
       text-align: center;
       padding: 25px 0 10px;
@@ -674,7 +712,7 @@ nav {
   border-bottom: 1px solid #b5bdc0;
   margin: 0;
   padding-bottom: 15px; }
-  @media only screen and (max-width: 610px) {
+  @media only screen and (max-width: 38.13rem) {
     .content-container h4.date {
       margin-right: 0;
       text-align: left;
@@ -698,8 +736,12 @@ nav {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
-  @media only screen and (max-width: 610px) {
+          align-items: center;
+  -webkit-transition: .2s ease;
+          transition: .2s ease; }
+  .content-container button:hover {
+    background-color: #627aad; }
+  @media only screen and (max-width: 38.13rem) {
     .content-container button {
       margin: 28px auto 0; } }
   .content-container button:after {
@@ -760,7 +802,7 @@ ul.tabs li.active {
 .tab_content {
   padding: 0 0 50px 35px;
   display: none; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     .tab_content {
       padding-left: 0; } }
   .tab_content--container {
@@ -774,7 +816,7 @@ ul.tabs li.active {
       -webkit-flex: 1;
           -ms-flex: 1;
               flex: 1; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 48rem) {
         .tab_content--container-text {
           max-width: 85%;
           margin: 0 auto; } }
@@ -788,7 +830,7 @@ ul.tabs li.active {
       -webkit-align-items: flex-end;
           -ms-flex-align: end;
               align-items: flex-end; }
-      @media only screen and (max-width: 850px) {
+      @media only screen and (max-width: 53.13rem) {
         .tab_content--container-image {
           display: none; } }
       .tab_content--container-image img {
@@ -823,13 +865,13 @@ ul.tabs li.active {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    @media only screen and (max-width: 610px) {
+    @media only screen and (max-width: 38.13rem) {
       .tab_content--watering-info {
         display: block; } }
     .tab_content--watering-info--watering-box {
       max-width: 260px;
       border: 1px solid #bababa; }
-      @media only screen and (max-width: 610px) {
+      @media only screen and (max-width: 38.13rem) {
         .tab_content--watering-info--watering-box {
           margin: 0 auto; }
           .tab_content--watering-info--watering-box:first-child {
@@ -851,27 +893,34 @@ ul.tabs li.active {
           margin: 25px 0;
           padding: 0; }
 
-.tab_last {
-  border-right: 1px solid #bababa; }
-
 .tab_drawer_heading {
   display: none; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 30rem) {
   .tabs {
     display: none; }
   .tab_drawer_heading {
-    background-color: #ccc;
+    background-color: #627aad;
     color: white;
     border-top: 1px solid #bababa;
     margin: 0;
-    padding: 5px 20px;
+    padding: 10px 0 10px 20px;
     display: block;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
-            user-select: none; }
-  .d_active {
-    background-color: #666;
-    color: #fff; } }
+            user-select: none; } }
+
+.nav-hover {
+  color: white;
+  -webkit-transition: .2s ease;
+          transition: .2s ease; }
+
+.d_active {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px 0 10px 20px; }
+
+.tab_last {
+  border-right: 1px solid #bababa; }

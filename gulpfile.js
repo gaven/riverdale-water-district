@@ -5,18 +5,16 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     clean        = require('gulp-clean'),
     notify       = require('gulp-notify'),
-    cache        = require('gulp-cache'),
     plumber      = require('gulp-plumber'),
     browserSync  = require('browser-sync'),
-    cp           = require('child_process');
-
+    reload       = browserSync.reload;
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
             baseDir: './'
         },
-        host: "localhost"
+        host: "http://localhost",
     });
 });
 
@@ -25,14 +23,14 @@ gulp.task('styles', function() {
     .pipe(plumber())
     .pipe(sass({
       style: 'expanded',
-      includePaths: ['node_modules/susy/sass', 'node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets']}))
+      includePaths: ['node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets']}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.reload({stream:true}))
+    .pipe(reload({stream:true}))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -45,7 +43,8 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
   // Watch .sass files
   gulp.watch('sass/**/*.{sass,scss}', ['styles']);
-  gulp.watch(['index.html', 'img/*', 'js/*.js']).on('change', browserSync.reload);
+  //Watch all files
+  gulp.watch(['index.html', 'img/*', 'js/*.js', 'css/*.css'], reload);
 });
 
 gulp.task('default', ['clean'], function() {

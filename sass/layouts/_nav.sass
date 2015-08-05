@@ -13,28 +13,31 @@ nav
     +respond-to(medium)
       justify-content: space-around
 
-    li
-      margin-right: +(40px)
-      padding: 0 20px
+    a
+      transition: .2s ease
 
       &:hover
         background-color: $light-blue
+        color: white
 
-      +respond-to(medium)
-        margin-right: 0
+      li
+        margin-right: +(40px)
+        padding: 0 20px
 
+        +respond-to(medium)
+          margin-right: 0
 
-      h4
-        color: $dark-grey
-        letter-spacing: .025rem
-        margin-top: 0
-        margin-bottom: +(7px)
-        padding-top: +(25px)
-        font-size: +(16px)
+        h4
+          color: $dark-grey
+          letter-spacing: .025rem
+          margin-top: 0
+          margin-bottom: +(7px)
+          padding-top: +(25px)
+          font-size: +(16px)
 
-      h5
-        letter-spacing: .025rem
-        color: #b5bdc0
-        margin: 0
-        size: +(13px)
-        padding-bottom: +(30px)
+        h5
+          letter-spacing: .025rem
+          color: #b5bdc0
+          margin: 0
+          size: +(13px)
+          padding-bottom: +(30px)

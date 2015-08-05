@@ -11,6 +11,9 @@
       padding-top: 25px
       color: $black
 
+      +respond-to(sm-md)
+        margin-left: +(20px)
+
     button
       font:
         family: merriweather
@@ -18,13 +21,17 @@
         size: +(15px)
       color: white
       background-color: $light-blue
-      padding: 15px 20px
-      border: none
+      padding: 14px 20px
+      border: 1px solid $light-blue
       outline: none
       margin: 0 auto 40px
       display: block
+      transition: .2s ease
 
-
+      &:hover
+        background-color: $light-grey
+        color: $light-blue
+        border: 1px solid $border-color
 
   &--tabs
     max-width: +(950px)
@@ -33,3 +40,7 @@
 
   +respond-to(medium)
     padding-right: +(10px)
+
+  +respond-to(sm-md)
+    padding-left: +(10px)
+    padding-right: +(20px)

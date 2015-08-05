@@ -10,7 +10,6 @@
     margin-left: +(10px)
     margin-right: +(10px)
 
-
   &--logo
     min-width: +(250px)
     margin-left: +(20px)
@@ -23,9 +22,6 @@
       float: left
       margin-right: 10px
 
-      +respond-to(medium)
-        margin-right: 0
-
     h1
       font-size: +(30px)
       color: $black
@@ -34,7 +30,6 @@
       margin: 0
       display: block
       padding-top: 10px
-
 
     h3
       font-size: +(16px)
@@ -52,7 +47,6 @@
     +respond-to(medium)
       width: +(150px)
 
-
     h4
       font-size: +(15px)
       color: $dark-grey
@@ -62,20 +56,24 @@
       +respond-to(medium)
         display: none
 
-  &--button
-    font:
-      family: $merriweather
-      size: +(15px)
-      weight: 400
-    color: white
-    letter-spacing: .025rem
-    background-color: $green
-    border: none
-    padding: 12px 28px
-    outline: none
+    button
+      font:
+        family: $merriweather
+        size: +(15px)
+        weight: 400
+      color: white
+      letter-spacing: .025rem
+      background-color: $green
+      border: none
+      padding: 12px 28px
+      outline: none
+      transition: .2s ease
 
-    +respond-to(medium)
-      justify-content: space-around
+      &:hover
+        background-color: $light-blue
 
-    +respond-to(small)
-      display: none
+      +respond-to(medium)
+        justify-content: space-around
+
+      +respond-to(small)
+        display: none
